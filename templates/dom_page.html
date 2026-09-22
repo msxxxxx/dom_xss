@@ -2,17 +2,19 @@
 <!-- saved from url=(0028) -->
 <html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Учебный демо-сайт: DOM XSS</title>
+  <title>DOM XSS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Подключаем внешний CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-
-        <form id="form1" action="/admin" method="get">
+<div class="container">
+<h1>Выбери пользователя для поиска. У админа больше информации.</h1>
+        <form class="form" id="form1" action="/admin" method="get">
     <button type="submit">Admin</button>
   </form>
-                <form id="form2" action="/guest" method="get">
+                <form class="form" id="form2" action="/guest" method="get">
     <button type="submit">Guest</button>
   </form>
-
+ </div>
 </body></html>
